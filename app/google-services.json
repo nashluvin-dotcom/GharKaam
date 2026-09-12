@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "807102017653",
+    "project_id": "ghar-kaam-212c0",
+    "storage_bucket": "ghar-kaam-212c0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807102017653:android:8df618c40a7df452d4883c",
+        "android_client_info": {
+          "package_name": "com.gharkaam.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQsVzywkWFsfTlXOh0O-62pkaTxbw7xao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

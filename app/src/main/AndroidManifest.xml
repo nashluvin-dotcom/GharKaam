@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:theme="@style/AppTheme"
+        android:label="GharKaam"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <activity android:name=".PhoneAuthActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".WorkerRegistrationActivity" />
+        <activity android:name=".FindWorkerActivity" />
+        <activity android:name=".WorkerProfileActivity" />
+        <activity android:name=".MyWorkerProfileActivity" />
+        <activity android:name=".EditWorkerProfileActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>

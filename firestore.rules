@@ -1,0 +1,60 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /userAccounts/{phone} {
+
+      // A logged-in user can create only their own account.
+      allow create: if request.auth != null
+                    && request.resource.data.ownerUid == request.auth.uid
+                    && request.resource.data.phone == phone;
+
+      // Users may check whether a phone account document exists.
+      // Existing account data can only be read by its owner.
+      allow get: if request.auth != null
+                 && (
+                   !exists(/databases/$(database)/documents/userAccounts/$(phone))
+                   || resource.data.ownerUid == request.auth.uid
+                 );
+
+      // Account listings are not allowed.
+      allow list: if false;
+
+      // After account creation, the app may only update
+      // worker-profile status fields.
+      allow update: if request.auth != null
+                    && resource.data.ownerUid == request.auth.uid
+                    && request.resource.data.ownerUid == resource.data.ownerUid
+                    && request.resource.data.diff(resource.data)
+                       .affectedKeys()
+                       .hasOnly([
+                         'workerProfileId',
+                         'workerRegistered'
+                       ]);
+
+      // Users can delete only their own account.
+      allow delete: if request.auth != null
+                    && resource.data.ownerUid == request.auth.uid;
+    }
+
+    match /workers/{workerId} {
+
+      // Logged-in users can find and view workers.
+      allow read: if request.auth != null;
+
+      // Worker profile must belong to the logged-in user.
+      allow create: if request.auth != null
+                    && request.resource.data.ownerUid == request.auth.uid;
+
+      // Only the owner can modify their worker profile.
+      allow update: if request.auth != null
+                    && resource.data.ownerUid == request.auth.uid
+                    && request.resource.data.ownerUid == request.auth.uid;
+
+      // Only the owner can delete their worker profile.
+      allow delete: if request.auth != null
+                    && resource.data.ownerUid == request.auth.uid;
+    }
+  }
+}

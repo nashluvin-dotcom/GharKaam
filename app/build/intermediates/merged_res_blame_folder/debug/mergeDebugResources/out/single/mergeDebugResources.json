@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.gharkaam.app-debug-17:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.gharkaam.app-main-19:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.gharkaam.app-debug-17:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.gharkaam.app-main-19:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.gharkaam.app-debug-17:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.gharkaam.app-main-19:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.gharkaam.app-debug-17:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.gharkaam.app-main-19:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.gharkaam.app-debug-17:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.gharkaam.app-main-19:/mipmap-xxhdpi/ic_launcher.png"
+    }
+]
