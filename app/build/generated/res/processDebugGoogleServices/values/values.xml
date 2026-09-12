@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">807102017653</string>
-    <string name="google_api_key" translatable="false">AIzaSyCQsVzywkWFsfTlXOh0O-62pkaTxbw7xao</string>
-    <string name="google_app_id" translatable="false">1:807102017653:android:8df618c40a7df452d4883c</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCQsVzywkWFsfTlXOh0O-62pkaTxbw7xao</string>
-    <string name="google_storage_bucket" translatable="false">ghar-kaam-212c0.firebasestorage.app</string>
-    <string name="project_id" translatable="false">ghar-kaam-212c0</string>
-</resources>
